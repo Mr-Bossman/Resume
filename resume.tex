@@ -1,0 +1,222 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+	\item{
+		\textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+		\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+				\textbf{#1} & \textit{\footnotesize{#4}} \\
+				\textit{\footnotesize{#3}} &	\footnotesize{#2}\\
+		\end{tabular*}
+		\vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+		\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+				\textbf{#1} & \textit{\footnotesize{#3}} \\
+				\footnotesize{\textit{#2}} & \footnotesize{#4}
+		\end{tabular*}
+		\vspace{-2.4mm}
+}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+\newcommand{\phone}{xxxxxxxx}
+\newcommand{\email}{Mr-Bossman075@gmail.com}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+{
+\begin{multicols}{2}
+	\textbf{\Large Jesse Taube} \\
+	{Embedded Software Engineer} \\
+	{University of Massachusetts Lowell} \\
+	\vfill\null
+	\RaggedLeft
+	{\raisebox{0.0\height}{\footnotesize \faPhone}\ \phone} \\
+	{\href{mailto:\email}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\email}}} \\
+	{\href{https://github.com/Mr-Bossman}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}}} \\
+	{\href{https://www.linkedin.com/in/jesse-taube-749351229/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}}
+\end{multicols}
+}
+\vspace{-3mm}
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+\begin{itemize}[leftmargin=0.05in, label={}]
+		\small{\item{
+		 \textbf{Languages}{: C, C++, Shell, Verilog, Python, JS/Node, HTML+CSS } \\
+		 \textbf{Tools \& Technologies}{: Git, KVM, Linux Kernel, U-Boot, GNU tools, Automake, KiCad} \\
+		 \textbf{Protocols \& Libraries}{: Networking, TCP/IP, I\textsuperscript{2}C, SPI, RS232, AMBA, C\&C++ STL, OpenCV, LibAV}\\
+		 \textbf{Hardware}{: Experienced with reading schematics, using oscilloscopes, multi-meters and low speed routing} \\
+		 \textbf{Areas of Interest}{: Embedded Linux, IOT and IOT security, RTOSs, Baremetal and Firmware} \\
+		}}
+\end{itemize}
+\vspace{-16pt}
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+		\resumeProject
+			{Linux Ports} %Project Name
+			{Porting of IMXRT to the Linux Kernel} %Project Name, Location Name
+			{} %Event Dates
+
+			\resumeItemListStart
+			\item {Writing Kernel drivers in C and Device Trees}
+			\item {Debuging over JTAG with GDB}
+			\item {Using agile development with co-developers}
+		\resumeItemListEnd
+		\vspace{-2mm}
+
+		\resumeProject
+			{KISC-V} %Project Name
+			{A KISS principle RISC-V32I CPU, written in SystemVerilog} %Project Name, Location Name
+			{} %Event Dates
+
+			\resumeItemListStart
+			\item {Written in SystemVerilog and debugged with GTKWave}
+			\item {Micocode generation in Python}
+			\item {Custom trap handler in C and Assembably to emulate CSR instructions}
+			\item {Can run No-MMU Linux}
+		\resumeItemListEnd
+		\vspace{-2mm}
+
+		\resumeProject
+			{Personal Blog} %Project Name
+			{Blog with backend in NodeJS hosted Locally} %Project Name, Location Name
+			{} %Event Dates
+
+			\resumeItemListStart
+			\item {Dynamic and static pages in NodeJS using Express}
+			\item {Jquery and Bootstrap for frontend}
+			\item {Locally hosted on servers running cockpits KVM}
+		\resumeItemListEnd
+	\resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+	\resumeSubHeadingListStart
+		\resumeSubheading
+			{D3 Engineering}{Rochester, New York}
+			{Intern Kernel developer, on the Nvidia Jetson Team}{May 2023 - Aug 2023}
+			\vspace{-2.0mm}
+			\resumeItemListStart
+		\item {Linux Kernel driver development in C for GMSL and FPD-link cameras.}
+		\item {Writing device trees and device tree overlays.}
+		\item {Reading schematics and datasheets.}
+		\item {Working with oscilloscopes and multi-meters.}
+		\item {Debuging hardware and software issues, such as MIPI CSI dataloss.}
+		\resumeItemListEnd
+
+		\vspace{-3.0mm}
+
+		\resumeSubheading
+			{Part-time Freelancer}{Hybrid}
+			{Hardware and Software developer}{Jun 2018 - Present}
+			\vspace{-2.0mm}
+			\resumeItemListStart
+			\item {Writing Kernel drivers for custom hardware.}
+			\item {Development of custom test boards.}
+			\item {UL certified SOM based custom motor control board with HDMI.}
+			\item {Programing tutor for University and Highschool students.}
+		\resumeItemListEnd
+
+		\vspace{-3.0mm}
+
+		\resumeSubheading
+			{Microcenter}{Cambridge, Massachusetts}
+			{Customer Service Representative}{Feb 2022 - Jan 2023}
+			\vspace{-2.0mm}
+			\resumeItemListStart
+			\item {Communication with management and customers.}
+			\item {Diagnosing and helping customers with computer problems.}
+		\resumeItemListEnd
+
+		\vspace{-3.0mm}
+
+	\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+	\resumeSubHeadingListStart
+		\resumeSubheading
+			{University of Massachusetts Lowell}{}
+			{Bachelor of Computer Engineering}{2022-26}
+		\resumeSubheading
+			{Newton South High School}{}
+			{LigerBots - FRC team 2877}{2022}
+			{Science team}{}
+	\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+\end{document}
