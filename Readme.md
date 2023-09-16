@@ -1,3 +1,3 @@
 # This is my public Résumé.
 
-![resume](resume.pdf)
+![resume](resume.svg)
